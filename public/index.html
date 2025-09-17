@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chat Server</h1>
+     <input id="username" type="text" placeholder="Username" />
+     <input id="room" placeholder="Room Name" />
+     <button onclick="joinRoom()">Join Room</button>
+
+    <input id="msg" type="text" placeholder="Type a Message" />
+     <button onclick="sendMsg()">Send Message</button>
+
+     <ul id="messages"></ul>
+
+     <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
