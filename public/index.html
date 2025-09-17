@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>Chat Server</h1>
+    <div>
+    <h1>Broadcast group message</h1>
      <input id="username" type="text" placeholder="Username" />
      <input id="room" placeholder="Room Name" />
      <button onclick="joinRoom()">Join Room</button>
@@ -15,6 +17,19 @@
      <button onclick="sendMsg()">Send Message</button>
 
      <ul id="messages"></ul>
+     </div>
+
+     <div>
+        <h1>Private Message</h1>
+        <input id="privateUsername" type="text" placeholder="Private username" />
+        <button onclick="registerUser()">Register User</button>
+         
+        <input id="toUsername" type="text" placeholder="Enter the receipent username" />
+        <input id="privateMsg" type="text" placeholder="Enter message" />
+        <button onclick="sendPrivateMsg()">Send</button>
+
+        <ul id="privateMessages"></ul>
+     </div>
 
      <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>

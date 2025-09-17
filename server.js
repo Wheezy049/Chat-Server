@@ -8,9 +8,26 @@ const io = new Server(server);
 
 app.use(express.static("public"));
 
+const users = {};
+
 io.on('connection', (socket) =>{
     console.log("User connected", socket.id);
 
+    socket.on("registerUser", ({username}) => {
+        users[username] = socket.id;
+        socket.username = username;
+        console.log(users);
+    })
+
+    socket.on("privateMessage", ({to, message}) => {
+        const targetedUserId = users[to];
+        if(targetedUserId){
+            io.to(targetedUserId).emit("receivePrivateMessage", {
+                from: socket.username,
+                message
+            })
+        } 
+    })
 
     socket.on("joinRoom", ({room, username}) => {
        socket.username = username;
