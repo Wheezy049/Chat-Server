@@ -8,7 +8,7 @@
 
  - Real-time message updates
 
-- Multiple users in the same room
+ - Multiple users in the same room
 
 ## Features
 1. Broadcast (Group) Chat
@@ -33,8 +33,8 @@
 
 ### Clone the repository:
 ```bash
-git clone <your-repo-url>
-cd <repo-directory>
+git clone https://github.com/Wheezy049/Chat-Server
+cd chat-server
 ```
 
 ### Install dependencies:
@@ -129,6 +129,7 @@ Open another tab or browser at http://localhost:3000.
 - Private messaging relies on registered usernames to route messages.
 
 - Messages are displayed in real-time using Socket.IO events.
+
 
 
 ✍️ Author
